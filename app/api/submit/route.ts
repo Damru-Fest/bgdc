@@ -64,11 +64,11 @@ export async function POST(request: NextRequest) {
             },
           ],
         },
-        // Year field (Multi-select)
+        // Year field (Select)
         "Year": {
-          multi_select: data.year.map((year: string) => ({
-            name: year,
-          })),
+          select: {
+            name: data.year,
+          },
         },
         // WhatsApp Number field (Phone)
         "WhatsApp Number": {

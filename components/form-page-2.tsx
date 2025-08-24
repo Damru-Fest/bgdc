@@ -169,7 +169,7 @@ interface FormPage2Props {
 
 export default function FormPage2({ formData, errors, onFormDataChange, onSubmit, onBack, isSubmitting = false }: FormPage2Props) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 py-16 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 pb-16 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12">
           <div className="flex items-center justify-center mb-8">
@@ -205,7 +205,7 @@ export default function FormPage2({ formData, errors, onFormDataChange, onSubmit
 
         <Card className="shadow-2xl border-2 bg-white backdrop-blur-sm slide-in-animation">
           <CardHeader className="text-center pb-8 bg-gradient-to-r from-red-50 to-orange-50 rounded-t-lg">
-            <CardTitle className="text-3xl font-bold gradient-text">Registration Form - Page 2</CardTitle>
+            <CardTitle className="text-3xl font-bold gradient-text">Registration Form</CardTitle>
             <CardDescription className="text-lg text-gray-600">
               Select your preferred departments and tell us about yourself
             </CardDescription>

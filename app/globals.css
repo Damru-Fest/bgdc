@@ -1,5 +1,89 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Kamal';
+  src: url('/Kamal Modern Retro Vintage Serif/Kamal.woff2') format('woff2'),
+       url('/Kamal Modern Retro Vintage Serif/Kamal.woff') format('woff'),
+       url('/Kamal Modern Retro Vintage Serif/Kamal.ttf') format('truetype'),
+       url('/Kamal Modern Retro Vintage Serif/Kamal.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Pujarelah Font Family */
+@font-face {
+  font-family: 'Pujarelah';
+  src: url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/Web-PS/Pujarelah-Regular.woff2') format('woff2'),
+       url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/OpenType-PS/Pujarelah-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pujarelah';
+  src: url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/Web-PS/Pujarelah-Italic.woff2') format('woff2'),
+       url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/OpenType-PS/Pujarelah-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pujarelah';
+  src: url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/Web-PS/Pujarelah-Medium.woff2') format('woff2'),
+       url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/OpenType-PS/Pujarelah-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pujarelah';
+  src: url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/Web-PS/Pujarelah-MediumItalic.woff2') format('woff2'),
+       url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/OpenType-PS/Pujarelah-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pujarelah';
+  src: url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/Web-PS/Pujarelah-SemiBold.woff2') format('woff2'),
+       url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/OpenType-PS/Pujarelah-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pujarelah';
+  src: url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/Web-PS/Pujarelah-SemiBoldItalic.woff2') format('woff2'),
+       url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/OpenType-PS/Pujarelah-SemiBoldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pujarelah';
+  src: url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/Web-PS/Pujarelah-Bold.woff2') format('woff2'),
+       url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/OpenType-PS/Pujarelah-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pujarelah';
+  src: url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/Web-PS/Pujarelah-BoldItalic.woff2') format('woff2'),
+       url('/Pujarelah Serif Indian Fonts Nov 27/Pujarelah/OpenType-PS/Pujarelah-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   /* Damru Fest Color Theme - Deep burgundy and warm tones */
   --background: 0 0% 98%;

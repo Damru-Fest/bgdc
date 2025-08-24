@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Checkbox } from "@/components/ui/checkbox"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { ArrowRight, Calendar, CheckCircle, Users } from "lucide-react"
 
 export interface FormData {
   name: string
   email: string
   enrollmentId: string
-  year: string[]
+  year: string
   whatsappNumber: string
   preFestDepartments: string[]
   festDayDepartment: string
@@ -28,12 +28,8 @@ interface FormPage1Props {
 }
 
 export default function FormPage1({ formData, errors, onFormDataChange, onNext, onBack }: FormPage1Props) {
-  const handleYearToggle = (yearValue: string) => {
-    const newYear = formData.year.includes(yearValue) 
-      ? formData.year.filter((y) => y !== yearValue) 
-      : [...formData.year, yearValue]
-    
-    onFormDataChange({ ...formData, year: newYear })
+  const handleYearSelect = (yearValue: string) => {
+    onFormDataChange({ ...formData, year: yearValue })
   }
 
   return (
@@ -73,7 +69,7 @@ export default function FormPage1({ formData, errors, onFormDataChange, onNext, 
 
         <Card className="shadow-2xl border-2 bg-white backdrop-blur-sm slide-in-animation">
           <CardHeader className="text-center pb-8 bg-gradient-to-r from-red-50 to-orange-50 rounded-t-lg">
-            <CardTitle className="text-3xl font-bold gradient-text">Registration Form - Page 1</CardTitle>
+            <CardTitle className="text-3xl font-bold gradient-text">Registration Form </CardTitle>
             <CardDescription className="text-lg text-gray-600">
               Please provide your personal and academic information
             </CardDescription>
@@ -151,7 +147,7 @@ export default function FormPage1({ formData, errors, onFormDataChange, onNext, 
                 <Input
                   id="whatsappNumber"
                   type="tel"
-                  placeholder="+91 98765 43210"
+                  placeholder="Enter your number"
                   value={formData.whatsappNumber}
                   onChange={(e) => onFormDataChange({ ...formData, whatsappNumber: e.target.value })}
                   className={`form-input-enhanced h-14 text-base ${errors.whatsappNumber ? "form-input-error" : ""}`}
@@ -173,21 +169,24 @@ export default function FormPage1({ formData, errors, onFormDataChange, onNext, 
               <div className="space-y-2">
                 <Label className="text-base font-medium flex items-center gap-1 text-gray-900">
                   Current Year <span className="text-red-500">*</span>
-                  <span className="text-sm text-gray-500 ml-2">(Select all applicable)</span>
+                  <span className="text-sm text-gray-500 ml-2">(Select one)</span>
                 </Label>
-                <div className="grid grid-cols-2 gap-4 mt-4">
+                <RadioGroup
+                  value={formData.year}
+                  onValueChange={handleYearSelect}
+                  className="grid grid-cols-2 gap-4 mt-4"
+                >
                   {["1st Year", "2nd Year", "3rd Year", "4th Year"].map((year) => (
                     <div
                       key={year}
                       className={`flex items-center space-x-3 p-4 rounded-xl border-2 cursor-pointer ${
-                        formData.year.includes(year) ? "border-red-500 bg-red-50" : "border-gray-200 bg-white"
+                        formData.year === year ? "border-red-500 bg-red-50" : "border-gray-200 bg-white"
                       }`}
-                      onClick={() => handleYearToggle(year)}
+                      onClick={() => handleYearSelect(year)}
                     >
-                      <Checkbox
+                      <RadioGroupItem
+                        value={year}
                         id={year}
-                        checked={formData.year.includes(year)}
-                        onCheckedChange={() => handleYearToggle(year)}
                         className="w-5 h-5"
                       />
                       <Label htmlFor={year} className="text-base cursor-pointer font-medium text-gray-900">
@@ -195,7 +194,7 @@ export default function FormPage1({ formData, errors, onFormDataChange, onNext, 
                       </Label>
                     </div>
                   ))}
-                </div>
+                </RadioGroup>
                 {errors.year && (
                   <p className="text-red-500 text-sm mt-2 flex items-center gap-2 slide-in-animation">
                     <CheckCircle className="w-4 h-4" />

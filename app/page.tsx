@@ -18,7 +18,7 @@ export default function DamruLanding() {
     name: "",
     email: "",
     enrollmentId: "",
-    year: [],
+    year: "",
     whatsappNumber: "",
     preFestDepartments: [],
     festDayDepartment: "",
@@ -37,7 +37,7 @@ export default function DamruLanding() {
       newErrors.email = "Please use your Rishihood University email"
     }
     if (!formData.enrollmentId.trim()) newErrors.enrollmentId = "Enrollment ID is required"
-    if (formData.year.length === 0) newErrors.year = "Please select your year"
+    if (!formData.year.trim()) newErrors.year = "Please select your year"
     if (!formData.whatsappNumber.trim()) {
       newErrors.whatsappNumber = "WhatsApp number is required"
     } else if (!/^\d{10}$/.test(formData.whatsappNumber.replace(/\D/g, ""))) {
@@ -114,7 +114,7 @@ export default function DamruLanding() {
       name: "",
       email: "",
       enrollmentId: "",
-      year: [],
+      year: "",
       whatsappNumber: "",
       preFestDepartments: [],
       festDayDepartment: "",
