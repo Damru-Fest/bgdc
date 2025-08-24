@@ -196,7 +196,6 @@ const preFestDepartments = [
   },
 ];
 
-
 interface CommitteesSectionProps {
   onNext: () => void;
 }
@@ -204,15 +203,16 @@ interface CommitteesSectionProps {
 export default function CommitteesSection({ onNext }: CommitteesSectionProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50">
-      <div className="max-w-7xl mx-auto py-16 px-0 md:px-4">
-
+      <div className="max-w-7xl mx-auto py-16 px-4 md:px-4">
         {/* Pre-Fest Departments Section */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 gradient-text">Fest Departments</h3>
+            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 gradient-text">
+              Fest Departments
+            </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Explore our committees and departments. Each offers unique
-            opportunities to contribute your skills and grow as a leader.
+              opportunities to contribute your skills and grow as a leader.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -293,11 +293,19 @@ export default function CommitteesSection({ onNext }: CommitteesSectionProps) {
           </div>
         </div> */}
 
-        <div className="text-center">
+        <div
+          className="text-center md:relative fixed"
+          style={{
+            left: "50%",
+            transform: "translateX(-50%)",
+            bottom: "1.5rem",
+            // position: "fixed",
+          }}
+        >
           <Button
             size="lg"
             onClick={onNext}
-            className="px-12 py-8 text-xl rounded-2xl shadow-xl hover:shadow-red-300 transition-all duration-300 hover:scale-105 bg-gradient-to-r from-red-600 to-red-700"
+            className="px-12 py-8 cursor-pointer text-xl rounded-2xl shadow-xl hover:shadow-red-300 transition-all duration-300 hover:scale-105 bg-gradient-to-r from-red-600 to-red-700"
           >
             <Target className="mr-3 w-6 h-6" />
             Continue to Registration

@@ -153,7 +153,6 @@ const preFestDepartments = [
   },
 ];
 
-
 const festDayDepartments = [
   {
     id: "competitions",
@@ -245,7 +244,6 @@ const festDayDepartments = [
   },
 ];
 
-
 interface FormPage2Props {
   formData: FormData;
   errors: Record<string, string>;
@@ -264,7 +262,7 @@ export default function FormPage2({
   isSubmitting = false,
 }: FormPage2Props) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 py-16 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 py-16 px-0 md:px-4">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12">
           <div className="flex items-center justify-center mb-8 overflow-x-auto px-4">
@@ -300,7 +298,7 @@ export default function FormPage2({
           </div>
         </div>
 
-        <Card className="shadow-2xl border-2 bg-white backdrop-blur-sm slide-in-animation py-0">
+        <Card className="shadow-2xl border-2 bg-transparent md:bg-white backdrop-blur-sm slide-in-animation py-0 md:rounded-xl rounded-[0]">
           <CardHeader className="text-center pb-8 bg-gradient-to-r from-red-50 to-orange-50 rounded-t-lg py-4">
             <CardTitle className="text-3xl font-bold gradient-text">
               Registration Form
@@ -309,8 +307,8 @@ export default function FormPage2({
               Select your preferred departments and tell us about yourself
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-10 p-4 sm:p-8">
-            <div className="form-section">
+          <CardContent className="space-y-10 p-0 md:p-4 ">
+            <div className="form-section md:rounded-[0.75rem] rounded-0">
               <h3 className="text-lg sm:text-xl font-semibold mb-6 flex items-center gap-2 text-gray-900">
                 <Target className="w-5 h-5 text-red-600" />
                 Department Preferences
@@ -633,7 +631,9 @@ export default function FormPage2({
                         >
                           <div className="flex items-start gap-3 sm:gap-4 w-full min-w-0">
                             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-orange-50 to-red-50 rounded-xl flex items-center justify-center shadow-sm flex-shrink-0 mt-0.5">
-                              <dept.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${dept.color}`} />
+                              <dept.icon
+                                className={`w-4 h-4 sm:w-5 sm:h-5 ${dept.color}`}
+                              />
                             </div>
                             <div className="flex-1 text-left min-w-0">
                               <div className="font-medium text-sm sm:text-base text-gray-900 leading-tight">
@@ -661,7 +661,7 @@ export default function FormPage2({
               </div>
             </div>
 
-            <div className="form-section">
+            <div className="form-section md:rounded-[0.75rem] rounded-0">
               <h3 className="text-xl font-semibold mb-6 flex items-center gap-2 text-gray-900">
                 <Heart className="w-5 h-5 text-red-600" />
                 Tell Us About Yourself

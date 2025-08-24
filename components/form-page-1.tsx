@@ -45,7 +45,7 @@ export default function FormPage1({
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 py-16 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 py-16 px-0 md:px-4">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12">
           <div className="flex items-center justify-center mb-8 overflow-x-auto px-4">
@@ -81,7 +81,7 @@ export default function FormPage1({
           </div>
         </div>
 
-        <Card className="shadow-2xl border-2 bg-white backdrop-blur-sm slide-in-animation py-0">
+        <Card className="shadow-2xl border-2 bg-transparent md:bg-white backdrop-blur-sm slide-in-animation py-0 md:rounded-xl rounded-[0]">
           <CardHeader className="text-center pb-8 bg-gradient-to-r from-red-50 to-orange-50 rounded-t-lg py-6">
             <CardTitle className="text-3xl font-bold gradient-text">
               Registration Form{" "}
@@ -90,8 +90,8 @@ export default function FormPage1({
               Please provide your personal and academic information
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-10 p-8">
-            <div className="form-section">
+          <CardContent className="space-y-10 md:p-8 p-0">
+            <div className="form-section md:rounded-[0.75rem] rounded-0">
               <h3 className="text-xl font-semibold mb-6 flex items-center gap-2 text-red-600">
                 <Users className="w-5 h-5" />
                 Personal Information
@@ -211,7 +211,7 @@ export default function FormPage1({
               </div>
             </div>
 
-            <div className="form-section">
+            <div className="form-section md:rounded-[0.75rem] rounded-0">
               <h3 className="text-xl font-semibold mb-6 flex items-center gap-2 text-gray-900">
                 <Calendar className="w-5 h-5 text-red-600" />
                 Academic Information
