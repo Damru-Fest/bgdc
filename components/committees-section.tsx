@@ -141,15 +141,6 @@ const preFestDepartments = [
     color: "text-gray-600",
   },
   {
-    id: "operations",
-    name: "Operations",
-    description:
-      "Oversee overall fest operations and coordination between different teams.",
-    shortDesc: "Oversee operations and coordination",
-    icon: Workflow,
-    color: "text-blue-600",
-  },
-  {
     id: "hospitality",
     name: "Hospitality",
     description:
@@ -185,15 +176,7 @@ const preFestDepartments = [
     icon: ClipboardCheck,
     color: "text-cyan-600",
   },
-  {
-    id: "event-coordination",
-    name: "Event Coordination",
-    description:
-      "Work with multiple teams to ensure every event runs seamlessly on fest days.",
-    shortDesc: "Coordinate teams for seamless events",
-    icon: Users,
-    color: "text-gray-700",
-  },
+
 ];
 
 interface CommitteesSectionProps {
