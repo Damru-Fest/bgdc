@@ -104,15 +104,6 @@ export default function ThankYouSection({ onRegisterAnother }: ThankYouSectionPr
                 </div>
               </div>
 
-              <div className="mt-6 sm:mt-8 lg:mt-10 p-4 sm:p-6 bg-gradient-to-r from-red-100 to-orange-100 rounded-2xl border-2 border-red-200">
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                  <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-red-500 flex-shrink-0" />
-                  <p className="text-base sm:text-lg font-semibold text-gray-900 text-center">Get ready for an amazing experience!</p>
-                </div>
-                <p className="text-gray-700 leading-relaxed text-sm sm:text-base text-center">
-                  You're now part of something special. Damru 2025 is going to be unforgettable, and you'll play a key role in making it happen!
-                </p>
-              </div>
             </CardContent>
           </Card>
 

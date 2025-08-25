@@ -45,7 +45,7 @@ import { FormData } from "./form-page-1";
 const preFestDepartments = [
   {
     id: "sponsorship-partnerships",
-    name: "Sponsorship & Partnerships",
+    name: "Sponsorship ",
     description:
       "Love talking to people and sealing the deal? Bring in exciting brands, secure sponsorships, and manage lasting partnerships for Damru.",
     shortDesc: "Secure sponsors and manage partnerships",
@@ -54,7 +54,7 @@ const preFestDepartments = [
   },
   {
     id: "outreach-community",
-    name: "Outreach & Community",
+    name: "Outreach ",
     description:
       "Take Damru beyond campus! Connect with colleges, student communities, and networks to spread the buzz far and wide.",
     shortDesc: "Connect with colleges and student networks",
@@ -63,7 +63,7 @@ const preFestDepartments = [
   },
   {
     id: "design-creative",
-    name: "Design & Creative",
+    name: "Design ",
     description:
       "If you’ve got an eye for aesthetics, this is your space. Work on everything from posters and digital creatives to on-ground branding.",
     shortDesc: "Design posters, creatives, and branding",
@@ -72,7 +72,7 @@ const preFestDepartments = [
   },
   {
     id: "tech-digital",
-    name: "Tech & Digital",
+    name: "Tech ",
     description:
       "Build and manage everything digital. From the fest website and registration systems to online platforms and experiences.",
     shortDesc: "Manage website, registrations, and tech",
@@ -81,7 +81,7 @@ const preFestDepartments = [
   },
   {
     id: "decor-experience",
-    name: "Decor & Experience",
+    name: "Decor ",
     description:
       "Bring the vibe! Transform the campus with themed décor, art installations, and creative setups that leave a mark.",
     shortDesc: "Transform campus with themed décor",
@@ -108,7 +108,7 @@ const preFestDepartments = [
   },
   {
     id: "marketing-promotion",
-    name: "Marketing & Promotion",
+    name: "Marketing ",
     description:
       "Spread the word! Create campaigns, strategies, and social media buzz to make sure everyone knows about Damru.",
     shortDesc: "Run campaigns and spread the buzz",
@@ -144,7 +144,7 @@ const preFestDepartments = [
   },
   {
     id: "logistics-planning",
-    name: "Logistics & Planning",
+    name: "Logistics ",
     description:
       "The backbone of the fest! Manage resources, permissions, setups, and ensure everything runs like clockwork.",
     shortDesc: "Manage resources, permissions, and setups",
@@ -212,9 +212,9 @@ const festDayDepartments = [
   },
   {
     id: "qrt",
-    name: "QRT (Quick Response Team)",
+    name: "QRT",
     description:
-      "Be the first responders to any issues. Ensure quick solutions for fest-day problems.",
+      " (Quick Response Team) Be the first responders to any issues. Ensure quick solutions for fest-day problems.",
     icon: AlertTriangle,
     color: "text-orange-600",
   },
@@ -233,14 +233,6 @@ const festDayDepartments = [
       "Coordinate with vendors to ensure smooth services and stall setups during fest.",
     icon: Store,
     color: "text-teal-600",
-  },
-  {
-    id: "event-coordination",
-    name: "Event Coordination",
-    description:
-      "Work with multiple teams to ensure every event runs seamlessly on fest days.",
-    icon: Users,
-    color: "text-gray-600",
   },
 ];
 
@@ -729,7 +721,7 @@ export default function FormPage2({
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-8">
+            <div className="flex flex-col sm:flex-row gap-4 pt-8 px-4">
               <Button
                 variant="outline"
                 onClick={onBack}

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { Toaster } from "@/components/ui/toaster";
+import { ThemeProvider } from "@/components/theme-provider";
+import FAQSection from "@/components/faq-section";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/image.png" />
         <style>{`
@@ -33,9 +35,18 @@ html {
           rel="stylesheet"
         />
       </head>
-      <body>
-        {children}
-        <Toaster />
+      <body suppressHydrationWarning>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange
+          storageKey="damru-theme"
+        >
+          {children}
+          <Toaster />
+          <FAQSection buttonClassName="global-faq-button" />
+        </ThemeProvider>
       </body>
     </html>
   );

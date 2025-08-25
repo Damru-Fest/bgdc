@@ -592,3 +592,10 @@ textarea.form-input-enhanced:focus::placeholder {
 .hover\:scale-105:hover {
   transform: scale(1.05);
 }
+
+/* Hide global FAQ button on mobile for committees page to avoid duplication */
+@media (max-width: 768px) {
+  .committees-page .global-faq-button {
+    display: none !important;
+  }
+}

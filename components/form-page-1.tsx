@@ -263,7 +263,7 @@ export default function FormPage1({
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-8">
+            <div className="flex flex-col sm:flex-row gap-4 pt-8 px-4">
               <Button
                 variant="outline"
                 onClick={onBack}

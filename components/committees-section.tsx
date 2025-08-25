@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import FAQSection from "@/components/faq-section";
 import {
   ArrowRight,
   Target,
@@ -34,7 +36,7 @@ import {
 const preFestDepartments = [
   {
     id: "sponsorship-partnerships",
-    name: "Sponsorship & Partnerships",
+    name: "Sponsorship ",
     description:
       "Love talking to people and sealing the deal? Bring in exciting brands, secure sponsorships, and manage lasting partnerships for Damru.",
     shortDesc: "Secure sponsors and manage partnerships",
@@ -43,7 +45,7 @@ const preFestDepartments = [
   },
   {
     id: "outreach-community",
-    name: "Outreach & Community",
+    name: "Outreach ",
     description:
       "Take Damru beyond campus! Connect with colleges, student communities, and networks to spread the buzz far and wide.",
     shortDesc: "Connect with colleges and student networks",
@@ -52,7 +54,7 @@ const preFestDepartments = [
   },
   {
     id: "design-creative",
-    name: "Design & Creative",
+    name: "Design ",
     description:
       "If you’ve got an eye for aesthetics, this is your space. Work on everything from posters and digital creatives to on-ground branding.",
     shortDesc: "Design posters, creatives, and branding",
@@ -61,7 +63,7 @@ const preFestDepartments = [
   },
   {
     id: "tech-digital",
-    name: "Tech & Digital",
+    name: "Tech ",
     description:
       "Build and manage everything digital. From the fest website and registration systems to online platforms and experiences.",
     shortDesc: "Manage website, registrations, and tech",
@@ -70,7 +72,7 @@ const preFestDepartments = [
   },
   {
     id: "decor-experience",
-    name: "Decor & Experience",
+    name: "Decor ",
     description:
       "Bring the vibe! Transform the campus with themed décor, art installations, and creative setups that leave a mark.",
     shortDesc: "Transform campus with themed décor",
@@ -97,7 +99,7 @@ const preFestDepartments = [
   },
   {
     id: "marketing-promotion",
-    name: "Marketing & Promotion",
+    name: "Marketing ",
     description:
       "Spread the word! Create campaigns, strategies, and social media buzz to make sure everyone knows about Damru.",
     shortDesc: "Promote events and maintain buzz",
@@ -160,9 +162,9 @@ const preFestDepartments = [
   },
   {
     id: "qrt",
-    name: "QRT (Quick Response Team)",
+    name: "QRT ",
     description:
-      "Be the first responders to any issues. Ensure quick solutions for fest-day problems.",
+      "(Quick Response Team) Be the first responders to any issues. Ensure quick solutions for fest-day problems.",
     shortDesc: "Respond quickly to fest-day issues",
     icon: AlertTriangle,
     color: "text-orange-600",
@@ -184,6 +186,14 @@ interface CommitteesSectionProps {
 }
 
 export default function CommitteesSection({ onNext }: CommitteesSectionProps) {
+  // Add a CSS class to hide global FAQ on mobile for this page
+  React.useEffect(() => {
+    document.body.classList.add('committees-page');
+    return () => {
+      document.body.classList.remove('committees-page');
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-amber-50">
       <div className="max-w-7xl mx-auto py-16 px-4 md:px-4">
@@ -285,15 +295,32 @@ export default function CommitteesSection({ onNext }: CommitteesSectionProps) {
             // position: "fixed",
           }}
         >
-          <Button
-            size="lg"
-            onClick={onNext}
-            className="px-12 py-8 cursor-pointer text-xl rounded-2xl shadow-xl hover:shadow-red-300 transition-all duration-300 hover:scale-105 bg-gradient-to-r from-red-600 to-red-700"
-          >
-            <Target className="mr-3 w-6 h-6" />
-            Continue to Registration
-            <ArrowRight className="ml-3 w-6 h-6" />
-          </Button>
+          {/* Desktop: Only Continue button, FAQ is globally positioned */}
+          <div className="hidden md:block">
+            <Button
+              size="lg"
+              onClick={onNext}
+              className="px-12 py-8 cursor-pointer text-xl rounded-2xl shadow-xl hover:shadow-red-300 transition-all duration-300 hover:scale-105 bg-gradient-to-r from-red-600 to-red-700"
+            >
+              <Target className="mr-3 w-6 h-6" />
+              Continue 
+              <ArrowRight className="ml-3 w-6 h-6" />
+            </Button>
+          </div>
+
+          {/* Mobile: Both buttons side by side */}
+          <div className="md:hidden flex items-center justify-center gap-4">
+            <Button
+              size="lg"
+              onClick={onNext}
+              className="px-8 py-6 cursor-pointer text-lg rounded-2xl shadow-xl hover:shadow-red-300 transition-all duration-300 hover:scale-105 bg-gradient-to-r from-red-600 to-red-700 flex-1 max-w-xs"
+            >
+              <Target className="mr-2 w-5 h-5" />
+              Continue 
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+            <FAQSection isMobileInline={true} />
+          </div>
         </div>
       </div>
     </div>
