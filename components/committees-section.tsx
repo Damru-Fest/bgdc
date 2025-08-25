@@ -107,23 +107,14 @@ const preFestDepartments = [
     color: "text-red-600",
   },
   {
-    id: "exhibition-showcase",
-    name: "Exhibition",
-    description:
-      "Curate and manage stalls, showcases, and interactive exhibits that add flavor and creativity to the fest.",
-    shortDesc: "Curate stalls and exhibits",
-    icon: Store,
-    color: "text-teal-600",
-  },
-  {
-    id: "workshop-sessions",
-    name: "Workshops",
-    description:
-      "Organize interactive, creative, and impactful sessions that engage participants and provide learning opportunities.",
-    shortDesc: "Organize interactive workshops",
-    icon: Lightbulb,
-    color: "text-amber-600",
-  },
+  id: "exhibition-workshops",
+  name: "Exhibitions & Workshops",
+  description:
+    "Plan, design, and execute engaging exhibitions, stalls, and creative showcases while also organizing impactful workshops and sessions that inspire learning, interaction, and innovation at the fest.",
+  shortDesc: "Host exhibitions and interactive workshops",
+  icon: Lightbulb,
+  color: "text-teal-600",
+},
   {
     id: "vendor-management",
     name: "Vendor Management",
