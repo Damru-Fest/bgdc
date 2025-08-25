@@ -162,14 +162,6 @@ const festDayDepartments = [
     color: "text-red-600",
   },
   {
-    id: "operations",
-    name: "Operations",
-    description:
-      "Oversee overall fest operations and coordination between different teams.",
-    icon: Workflow,
-    color: "text-blue-600",
-  },
-  {
     id: "events",
     name: "Events",
     description:
