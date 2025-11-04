@@ -593,9 +593,90 @@ textarea.form-input-enhanced:focus::placeholder {
   transform: scale(1.05);
 }
 
-/* Hide global FAQ button on mobile for committees page to avoid duplication */
-@media (max-width: 768px) {
-  .committees-page .global-faq-button {
-    display: none !important;
+/* Gaming-themed animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
   }
 }
+
+@keyframes neon-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.5),
+                 0 0 20px rgba(239, 68, 68, 0.3),
+                 0 0 30px rgba(239, 68, 68, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(239, 68, 68, 0.8),
+                 0 0 30px rgba(239, 68, 68, 0.6),
+                 0 0 40px rgba(239, 68, 68, 0.4);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.neon-glow {
+  animation: neon-glow 2s ease-in-out infinite;
+}
+
+/* Gaming card hover effect */
+.gaming-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.gaming-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.gaming-card:hover::before {
+  opacity: 1;
+}
+
+.gaming-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(239, 68, 68, 0.4);
+}
+
+/* Input gaming focus effect */
+input:focus, textarea:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1),
+              0 0 20px rgba(239, 68, 68, 0.15);
+}
+

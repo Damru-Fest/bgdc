@@ -3,13 +3,12 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme-provider";
-import FAQSection from "@/components/faq-section";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Damru Fest 2025",
+  title: "BGMI Qualifiers 2025 - Damru Fest",
   description:
-    "Join the most exciting cultural fest at Rishihood University! Register for Damru Fest 2025 and be part of an unforgettable experience.",
+    "Register your squad for the ultimate BGMI Qualifiers at Damru Fest 2025! Compete with the best teams and claim victory in the battlefield.",
 };
 
 export default function RootLayout({
@@ -45,7 +44,6 @@ html {
         >
           {children}
           <Toaster />
-          <FAQSection buttonClassName="global-faq-button" />
         </ThemeProvider>
       </body>
     </html>
