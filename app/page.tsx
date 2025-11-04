@@ -36,7 +36,7 @@ export default function DamruLanding() {
     } else if (!/^\d{10}$/.test(formData.teamLeaderPhone.replace(/\D/g, ""))) {
       newErrors.teamLeaderPhone = "Please enter a valid 10-digit phone number";
     }
-    if (!formData.teamLeaderCollegeIdLink.trim()) newErrors.teamLeaderCollegeIdLink = "Team leader's college ID is required";
+    // College ID is now optional
     if (!formData.teamLeaderUID.trim()) newErrors.teamLeaderUID = "Team leader's UID is required";
     if (!formData.teamLeaderInGameName.trim()) newErrors.teamLeaderInGameName = "Team leader's in-game name is required";
     if (!formData.teamLeaderEmail.trim()) {
@@ -91,7 +91,7 @@ export default function DamruLanding() {
           newErrors[`${playerPrefix}Aadhar`] = "Please enter a valid URL (e.g., Google Drive link)";
         }
       }
-      if (!formData[`${playerPrefix}CollegeIdLink`].trim()) newErrors[`${playerPrefix}CollegeIdLink`] = `Player ${playerNumber} college ID is required`;
+      // College ID is now optional
       if (!formData[`${playerPrefix}Phone`].trim()) {
         newErrors[`${playerPrefix}Phone`] = `Player ${playerNumber} phone number is required`;
       } else if (!/^\d{10}$/.test(formData[`${playerPrefix}Phone`].replace(/\D/g, ""))) {

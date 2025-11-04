@@ -190,8 +190,8 @@ export default function BGMISection1({
             {/* Team Leader's College ID Link */}
             <div className="space-y-3">
               <Label htmlFor="teamLeaderCollegeIdLink" className="text-sm font-semibold text-gray-200 tracking-wide flex items-center gap-2">
-                <span className="w-1 h-4 bg-red-500 rounded-full"></span>
-                College ID (Google Drive Link or Image Link) <span className="text-red-400">*</span>
+                <span className="w-1 h-4 bg-gray-500 rounded-full"></span>
+                College ID (Google Drive Link or Image Link) <span className="text-gray-500 text-xs">(Optional)</span>
               </Label>
               <Input
                 id="teamLeaderCollegeIdLink"

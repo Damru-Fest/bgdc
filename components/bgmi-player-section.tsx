@@ -164,7 +164,7 @@ export default function BGMIPlayerSection({
             {/* Player College ID Link */}
             <div className="space-y-2">
               <Label htmlFor={`${playerPrefix}CollegeIdLink`} className="text-sm font-medium text-gray-200">
-                College ID (Player {playerNumber}) {isRequired && <span className="text-red-400">*</span>}
+                College ID (Player {playerNumber}) <span className="text-gray-500 text-xs">(Optional)</span>
               </Label>
               <Input
                 id={`${playerPrefix}CollegeIdLink`}
